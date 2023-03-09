@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "621621272855",
+    "firebase_url": "https://zepe-27e68.firebaseio.com",
+    "project_id": "zepe-27e68",
+    "storage_bucket": "zepe-27e68.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:621621272855:android:55e5fab72bf109db261752",
+        "android_client_info": {
+          "package_name": "net.atos.zepe"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "621621272855-gvt3s2rsqtsh6ndvt4epin6rubklisfq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXO9XOTK4_olkPyR3TEPjNs_1bEOe7t8E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "621621272855-gvt3s2rsqtsh6ndvt4epin6rubklisfq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
