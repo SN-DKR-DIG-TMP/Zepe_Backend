@@ -33,26 +33,26 @@ pipeline{
               }
               }
               }
-        stage('Upload Jar to nexus'){
-            steps{
+        //stage('Upload Jar to nexus'){
+           // steps{
                 
-                nexusArtifactUploader artifacts: [
-                    [
-                        artifactId: 'zepe-backend',
-                        classifier: '',
-                        file: 'target/zepe-backend-0.0.1-SNAPSHOT.jar',
-                        type: 'jar'
-                    ]
-                ],
-                credentialsId: 'nexus',
-                groupId: 'com.zepe-backend',
-                nexusUrl: '${NEXUS_URL}',
-                nexusVersion: 'nexus3',
-                protocol: 'http',
-                repository: 'zepe-backend',
-                version: '0.0.1-SNAPSHOT'
-            }
-        }
+             //   nexusArtifactUploader artifacts: [
+                   // [
+                     //   artifactId: 'zepe-backend',
+                       // classifier: '',
+                       // file: 'target/zepe-backend-0.0.1-SNAPSHOT.jar',
+                       // type: 'jar'
+                    //]
+               // ],
+               // credentialsId: 'nexus',
+               // groupId: 'com.zepe-backend',
+                //nexusUrl: '${NEXUS_URL}',
+                //nexusVersion: 'nexus3',
+                //protocol: 'http',
+                //repository: 'zepe-backend',
+                //version: '0.0.1-SNAPSHOT'
+           // }
+        //}
            
                     stage('Build Image'){
                           steps{
