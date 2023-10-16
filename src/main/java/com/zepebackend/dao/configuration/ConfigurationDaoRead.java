@@ -18,5 +18,5 @@ public interface ConfigurationDaoRead extends CoreAbstractQueryRepository<Config
 	// @Query("select c from Configuration c where c.partner.idPartner = :x")
 	// List<Configuration> listConfigPerPartner(@Param("x") Long idPartner);
 	List<Configuration> findByConfigurationIdPartner(Partner partner);
-	Optional<Configuration> findByConfigurationIdPartnerIdPartnerAndConfigurationIdCle(Long partnerId, String key);
+		Optional<Configuration> findByConfigurationIdPartnerIdPartnerAndConfigurationIdCle(Long partnerId, String key);
 }

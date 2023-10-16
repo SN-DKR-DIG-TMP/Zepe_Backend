@@ -82,7 +82,7 @@ public class CashmentService {
 
                 cashmentDaoWrite.saveAndFlush(cashmentSave);
                 cashmentDto.setTrade(convertEntityToDto(trade));
-
+                
                 paymentTokenService.deactivatePaymentToken(paymentToken.get().getToken());
 
                 PaymentDto paymentDto = new PaymentDto(cashmentDto.getCustomer(), new Date(),
@@ -95,7 +95,7 @@ public class CashmentService {
                     @Override
                     public void run() {
                         PushNotificationRequest request = new PushNotificationRequest(
-                                "Payment effectué avec succès", "Merci d'avoir utilisé Zepe",
+                                "Payment effectué de "+ cashmentDto.getAmount() +" avec succès", "Merci d'avoir utilisé Zepe",
                                 cashmentDto.getCustomerTokenFirebase());
                         pushService.sendPushNotification(paymentDto, paymentTokenG.getToken(), request);
 

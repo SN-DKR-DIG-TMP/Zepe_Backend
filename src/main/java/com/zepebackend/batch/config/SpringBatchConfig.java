@@ -46,12 +46,23 @@ public class SpringBatchConfig {
 
 		JdbcCursorItemReader<FactureModel> reader = new JdbcCursorItemReader<FactureModel>();
 		reader.setDataSource(dataSource);
-
+		
 		reader.setSql("select sum(a.amount) total , a.trade , a.business, p.id_partenariat \n"
 				+ "from cashment a, partenariat p \n" + "where a.business = p.id_entreprise\n"
 				+ "and a.trade = p.id_commerce\n" + "and a.is_valid = true\n" +"and a.date between '" + ZepeUtils.debutFinDuMois().get(ZepeConstants.START)
 				+ "'  and   '" + ZepeUtils.debutFinDuMois().get(ZepeConstants.END) + "' "
 				+ "group by a.trade,a.business, p.id_partenariat");
+		/*String debut = "2022-03-01T00:00:00.000";
+		String fin = "2022-03-31T23:59:59.999";
+		
+		reader.setSql("select sum(a.amount) total , a.trade , a.business, p.id_partenariat \n"
+				+ "from cashment a, partenariat p \n" + "where a.business = p.id_entreprise\n"
+				+ "and a.trade = p.id_commerce\n" + "and a.is_valid = true\n" +"and a.date between '" + debut
+				+ "'  and   '" + fin + "' "
+				+ "group by a.trade,a.business, p.id_partenariat");
+				
+		*System.out.println("Date Debut============="+ZepeUtils.debutFinDuMois().get(ZepeConstants.START));
+		System.out.println("Date Fin============="+ZepeUtils.debutFinDuMois().get(ZepeConstants.END));*/
 
 		reader.setRowMapper(new UserRowMapper());
 		return reader;

@@ -43,7 +43,7 @@ public class UserControllerRead {
 	
 	@GetMapping("/getVersion")
 	public String getVersion(){
-		String url = "http://193.43.134.150:8999/version.json";
+		String url = "http://atoszepe.ddns.net:8999/version.json";
 		return this.restTemplate.getForObject(url, String.class);
 	}
 }
