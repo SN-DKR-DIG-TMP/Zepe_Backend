@@ -85,16 +85,16 @@ pipeline{
                     }
 
                         }
-                            		post {
-   			 failure {
-                mail to: ''+"${env.USER_NAME}"+'@atos.net,eric.djikydjazik@atos.net,jospin.diffouofoufouo@atos.net,mohammad-abdoul-aziz.ciss@atos.net,abdou-karim.diop@atos.net',
-             		subject: "**Failed Pipeline**: ${currentBuild.fullDisplayName}",
-             		body: "Something is wrong with ${env.BUILD_URL}"
-    }
-             success{
-                mail to: ''+"${env.USER_NAME}"+'@atos.net,eric.djikydjazik@atos.net,jospin.diffouofoufouo@atos.net,mohammad-abdoul-aziz.ciss@atos.net,abdou-karim.diop@atos.net',
-                 subject: "**Success Pipeline**:${currentBuild.fullDisplayName}",
-           		    body: "Success of your build, here is the link of the build ${env.BUILD_URL}"
-                        }
-}
+                            		//post {
+   			// failure {
+            //    mail to: ''+"${env.USER_NAME}"+'@atos.net,eric.djikydjazik@atos.net,jospin.diffouofoufouo@atos.net',
+             	//	subject: "**Failed Pipeline**: ${currentBuild.fullDisplayName}",
+             	//	body: "Something is wrong with ${env.BUILD_URL}"
+   // }
+    //         success{
+       //         mail to: ''+"${env.USER_NAME}"+'@atos.net,eric.djikydjazik@atos.net,jospin.diffouofoufouo@atos.net',
+               //  subject: "**Success Pipeline**:${currentBuild.fullDisplayName}",
+           		 //   body: "Success of your build, here is the link of the build ${env.BUILD_URL}"
+                   //     }
+//}
               }
