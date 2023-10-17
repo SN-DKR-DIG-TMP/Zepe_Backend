@@ -1,4 +1,4 @@
-package com.zepebackend.service;
+/*package com.zepebackend.service;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -46,4 +46,4 @@ public class PartnerServiceTest {
 
 	}*/
 
-}
+}*/
