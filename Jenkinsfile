@@ -17,7 +17,7 @@ pipeline{
 
             stage('SCM Checkout') {
               steps {
-                 git(branch: 'main', credentialsId: 'gitlab',  url:'${GITLAB_URL}/zepe/zepe-backend-v1')
+                 git(branch: 'develop-v2', credentialsId: 'gitlab',  url:'${GITLAB_URL}/zepe/zepe-backend-v1')
               }
          }
            stage('Check Packages'){
@@ -33,8 +33,8 @@ pipeline{
               }
               }
               }
-        stage('Upload Jar to nexus'){
-            steps{
+       // stage('Upload Jar to nexus'){
+         //   steps{
                 
                 //nexusArtifactUploader artifacts: [
                 //    [
@@ -51,9 +51,9 @@ pipeline{
                 //protocol: 'http',
                 //repository: 'zepe-standaloneauth',
                 //version: '0.0.1-SNAPSHOT'
-                sh "echo 'Skip Nexus uploading beacause credentialsId not good.'"
-            }
-        }
+               // sh "echo 'Skip Nexus uploading beacause credentialsId not good.'"
+           // }
+      //  }
            
                     stage('Build Image'){
                           steps{
